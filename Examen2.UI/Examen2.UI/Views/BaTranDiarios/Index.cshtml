@@ -1,0 +1,131 @@
+﻿@model IEnumerable<Examen2.UI.Models.BaTranDiario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SubtipTransac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FecTransaccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodMoneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodSistema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonMovimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipCambio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AsientoContable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beneficiario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndEstado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndEnvCajas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodCajero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtaExterna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumReferencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubtipTransac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FecTransaccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodMoneda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodSistema)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonMovimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipCambio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AsientoContable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Beneficiario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndEstado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndEnvCajas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodCajero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CtaExterna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumReferencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionTime)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
